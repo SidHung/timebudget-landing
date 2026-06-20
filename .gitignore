@@ -1,0 +1,12 @@
+# OS / tooling
+.DS_Store
+.claude/
+node_modules/
+
+# Pre-launch business docs — keep private, never publish
+Marketing Roadmap.md
+ProductHunt 文案準備/
+ProductHunt 文案準備*.md
+
+# Internal design references (not used by the site)
+public/reference/

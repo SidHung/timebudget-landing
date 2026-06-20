@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TimeBudget helps you see your daily capacity, plan smarter, and avoid over-committing." />
+    <title>TimeBudget — Make every day count</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="TimeBudget home">
+        <svg viewBox="0 0 30 34" aria-hidden="true"><path d="M15 2 27 6v9c0 8-5 13-12 17C8 28 3 23 3 15V6l12-4Z" fill="none" stroke="#4169e1" stroke-width="2"/><path d="M4 8h22" stroke="#ffb21c" stroke-width="3"/><path d="M15 7v20" stroke="#7c5cff" stroke-width="2"/></svg>
+        <span><em>Time</em>Budget</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+      <nav aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero shell">
+        <div class="hero-copy reveal">
+          <h1>Manage daily plan<br><span>with ease</span></h1>
+          <p>Time Budget helps you clarify daily capacity.<br>Stay productive yet prevent over-committing.</p>
+          <a class="primary-button" href="#cta">Start Free Trial</a>
+        </div>
+        <img class="hero-art reveal" src="public/assets/hero-illustration.png" alt="A relaxed person planning their day by the beach" />
+      </section>
+
+      <section class="problem" id="testimonials">
+        <div class="shell problem-inner">
+          <img src="public/assets/problem-illustration.png" alt="A person trying to fit tasks into their schedule" loading="lazy" />
+          <div class="reveal">
+            <h2>Struggling to know if you can<br>get it all done today?</h2>
+            <p>Always discovering at the last moment that there's<br>not enough time, leading to decreased work quality.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section shell" id="features">
+        <div class="section-heading reveal">
+          <h2>Master Your Time, Intuitively.</h2>
+          <p>Know exactly how much time you have left, plan<br>smarter, and stay on track without the stress.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <h3>Real-time Capacity</h3>
+            <p>Accurately track your remaining usable time in real-time, ensuring full clarity over today's constraints.</p>
+            <div class="donut" role="img" aria-label="Free time: 8 hours 30 minutes"><div><span>Free</span><strong>08:30.05</strong></div></div>
+          </article>
+          <article class="feature-card reveal">
+            <h3>Visualized Distribution</h3>
+            <p>Keep every plan visible and under control. Focus on what matters and stay aligned with your day.</p>
+            <div class="task-list">
+              <div class="task">
+                <div class="task-top"><i class="check"></i><span>Reading</span><b class="dots">⋯</b></div>
+                <div class="task-bottom"><svg class="clock-mini" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg><small>Estimation</small><b>3 hrs</b></div>
+              </div>
+              <div class="task">
+                <div class="task-top"><i class="check done"></i><span>Reading</span><b class="dots">⋯</b></div>
+                <div class="task-bottom"><svg class="clock-mini" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg><small>Estimation</small><b>3 hrs</b></div>
+              </div>
+              <div class="task">
+                <div class="task-top"><i class="check done"></i><span>Reading</span><b class="dots">⋯</b></div>
+                <div class="task-bottom"><svg class="clock-mini" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg><small>Estimation</small><b>3 hrs</b></div>
+              </div>
+            </div>
+          </article>
+          <article class="feature-card reveal">
+            <h3>See where your time really goes.</h3>
+            <p>Visualize your time budget to uncover hidden patterns and improve your daily focus with actionable data.</p>
+            <div class="chart-card">
+              <div class="chart-head">
+                <span class="chart-title">Time tracking</span>
+                <span class="chart-range">‹ &nbsp;2025 Oct 6 - Oct 12&nbsp; ›</span>
+                <span class="chart-total">Weekly Total : 15hrs</span>
+              </div>
+              <div class="bars" aria-label="Estimated versus actual time chart">
+                <i style="--e:32%;--a:40%"></i><i style="--e:50%;--a:62%"></i><i style="--e:14%;--a:20%"></i><i style="--e:24%;--a:30%"></i><i style="--e:58%;--a:90%"></i><i style="--e:26%;--a:34%"></i><i style="--e:44%;--a:96%"></i>
+              </div>
+              <div class="days"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+              <div class="legend"><span>Estimated</span><span>Actual</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="process shell">
+        <div class="section-heading reveal">
+          <h2>Redefine Your Approach to Time Management</h2>
+          <p>Time ≠ Schedule, but rather “Limited Resources”<br>Treat “time” like a financial budget to truly master your entire day.</p>
+        </div>
+        <div class="steps">
+          <article class="step step-one reveal"><span class="number">01</span><div class="step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="22"/><path d="M32 20v12l8 6"/></svg></div><h3>Review your time today</h3><p>Know your time in seconds,<br>stay aware of your daily budget.</p></article>
+          <article class="step step-two reveal"><span class="number">02</span><div class="step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="15" y="16" width="34" height="38" rx="5"/><path d="M23 16v-2a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v2"/><path d="M23 30l3 3 5-6"/><path d="M37 31h7"/><path d="M23 44l3 3 5-6"/><path d="M37 45h7"/></svg></div><h3>Task Allocation</h3><p>Plan ahead so every task gets<br>the time it deserves.</p></article>
+          <article class="step step-three reveal"><span class="number">03</span><div class="step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="23" r="11"/><path d="M32 17v6l4 3"/><path d="M16 40c4 8 11 12 16 12s12-4 16-12"/></svg></div><h3>Have time to spare</h3><p>Plan smart and stay ahead, so<br>you always have time to spare.</p></article>
+        </div>
+      </section>
+
+      <section class="comparison">
+        <div class="shell comparison-grid">
+          <article class="chaos reveal"><div class="emoji">🫠</div><h2>The current work situation<br>is pure chaos.</h2><ul><li>💔&nbsp; Calendar's bleeding red; progress is uncertain.</li><li>💔&nbsp; Can't gauge bandwidth for new tasks.</li><li>💔&nbsp; Low output, afternoon burnout.</li></ul></article>
+          <article class="calm reveal"><div class="emoji">🙌</div><h2>The current work situation<br>is pure chaos.</h2><ul><li>✅&nbsp; Clear, budget-focused scheduling.</li><li>✅&nbsp; Stay calm, knowing your limits.</li><li>✅&nbsp; Balanced scheduling, punctual exits.</li></ul></article>
+        </div>
+      </section>
+
+      <section class="faq shell" id="faq">
+        <h2>Frequently asked questions</h2>
+        <div class="accordion">
+          <article class="faq-item open"><button aria-expanded="true"><span class="faq-num">01</span><strong>Will this take up a lot of my time?</strong><i></i></button><div class="answer"><p>No, it's as quick as using a memo app – just 1 second to input a schedule. Time Budget's design philosophy is to “save your time,” not add burden.</p></div></article>
+          <article class="faq-item"><button aria-expanded="false"><span class="faq-num">02</span><strong>How is this different from a calendar?</strong><i></i></button><div class="answer"><p>Calendars tell you when things happen. TimeBudget also shows how much usable time remains, so every commitment fits your real capacity.</p></div></article>
+          <article class="faq-item"><button aria-expanded="false"><span class="faq-num">03</span><strong>Do I need to input a lot of information?</strong><i></i></button><div class="answer"><p>No. Add only a task and its time estimate—TimeBudget turns it into a clear view of your day automatically.</p></div></article>
+        </div>
+      </section>
+
+      <section class="final-cta" id="cta"><div class="reveal"><h2>Make every day count.</h2><a class="secondary-button" href="mailto:hello@timebudget.app">Start Free Trial</a></div></section>
+    </main>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
