@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="See the hours you can truly use, then put them behind the work that matters most." />
+    <title>TimeBudget — Put time behind what matters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="TimeBudget home"><em>Time</em>Budget</a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+      <nav aria-label="Main navigation">
+        <a href="#mechanism">How it works</a>
+        <a href="#difference">Why it works</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero shell">
+        <div class="hero-copy reveal">
+          <h1>Put your time behind<br><span>what matters most.</span></h1>
+          <p>See the hours you can truly use—then focus them on high-impact work without overloading the day.</p>
+          <a class="primary-button" href="#cta">See Your Focus Budget</a>
+        </div>
+        <img class="hero-art reveal" src="public/assets/hero-illustration.png" alt="An independent worker focusing on an important project" />
+      </section>
+
+      <section class="problem" id="difference">
+        <div class="shell problem-inner">
+          <img src="public/assets/problem-illustration.png" alt="A person choosing between competing priorities" loading="lazy" />
+          <div class="reveal">
+            <h2>Your to-do list isn't<br>a realistic plan.</h2>
+            <p>Client work, product, marketing, maintenance, and life all compete for the same day. Before you commit, see what actually fits.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section shell" id="mechanism">
+        <div class="section-heading reveal">
+          <h2>Turn available time into focused progress.</h2>
+          <p>Account for real life, fund your priorities,<br>and improve every estimate.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <h3>See your real capacity</h3>
+            <p>Fixed routines come out first, revealing the hours you can actually use.</p>
+            <img class="donut" src="public/assets/pie.png" alt="Free time: 8 hours 30 minutes" width="330" height="330" />
+          </article>
+          <article class="feature-card reveal">
+            <h3>Fund what matters</h3>
+            <p>Add estimates to see what fits—and what needs to wait.</p>
+            <div class="task-list">
+              <div class="task">
+                <i class="check done"></i>
+                <div class="task-body">
+                  <div class="task-top"><span>Release blocker</span><b class="dots">···</b></div>
+                  <div class="task-bottom"><span class="clock-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg></span><small>Selected</small><b>2 hrs</b></div>
+                </div>
+              </div>
+              <div class="task">
+                <i class="check done"></i>
+                <div class="task-body">
+                  <div class="task-top"><span>Client call</span><b class="dots">···</b></div>
+                  <div class="task-bottom"><span class="clock-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg></span><small>Fixed</small><b>1 hr</b></div>
+                </div>
+              </div>
+              <div class="task">
+                <i class="check"></i>
+                <div class="task-body">
+                  <div class="task-top"><span>Launch post</span><b class="dots">···</b></div>
+                  <div class="task-bottom"><span class="clock-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg></span><small>Later</small><b>3 hrs</b></div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="feature-card reveal">
+            <h3>Learn your pace</h3>
+            <p>Compare planned and actual time to make better commitments next time.</p>
+            <div class="chart-card">
+              <div class="chart-head">
+                <span class="chart-title">Focus budget review</span>
+                <span class="chart-range">‹ &nbsp;2025 Oct 6 - Oct 12&nbsp; ›</span>
+                <span class="chart-total">A clearer next plan</span>
+              </div>
+              <div class="bars" aria-label="Planned versus actual time chart">
+                <i style="--e:32%;--a:40%"></i><i style="--e:50%;--a:62%"></i><i style="--e:14%;--a:20%"></i><i style="--e:24%;--a:30%"></i><i style="--e:58%;--a:90%"></i><i style="--e:26%;--a:34%"></i><i style="--e:44%;--a:96%"></i>
+              </div>
+              <div class="days"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+              <div class="legend"><span>Planned</span><span>Actual</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="process shell">
+        <div class="section-heading reveal">
+          <h2>A reality check before you commit.</h2>
+          <p>Calendars show when. To-do lists show what.<br>TimeBudget shows what still fits.</p>
+        </div>
+        <div class="steps">
+          <article class="step step-one reveal"><span class="number">01</span><div class="step-icon"><img src="public/assets/step-review.png" alt="" width="76" height="70" /></div><h3>Account for fixed time</h3><p>Work, sleep, and routines<br>come out first.</p></article>
+          <article class="step step-two reveal"><span class="number">02</span><div class="step-icon"><img src="public/assets/step-allocation.png" alt="" width="87" height="85" /></div><h3>Allocate your focus</h3><p>Give usable hours to<br>high-impact work.</p></article>
+          <article class="step step-three reveal"><span class="number">03</span><div class="step-icon"><img src="public/assets/step-spare-time.png" alt="" width="67" height="80" /></div><h3>Adjust with evidence</h3><p>Use actual time to make<br>the next plan better.</p></article>
+        </div>
+      </section>
+
+      <section class="comparison">
+        <div class="shell comparison-grid">
+          <article class="chaos reveal">
+            <div class="emoji">🫠</div>
+            <h2>When everything<br>competes.</h2>
+            <ul>
+              <li>💔&nbsp; Important work gets pushed into late nights.</li>
+              <li>💔&nbsp; New tasks arrive without a capacity check.</li>
+              <li>💔&nbsp; Unfinished work stays in your head.</li>
+            </ul>
+          </article>
+          <article class="calm reveal">
+            <div class="emoji">🎯</div>
+            <h2>When time<br>has a budget.</h2>
+            <ul>
+              <li>✅&nbsp; Real capacity is visible.</li>
+              <li>✅&nbsp; Priorities get protected hours.</li>
+              <li>✅&nbsp; The rest can wait on purpose.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq shell" id="faq">
+        <h2>Frequently asked questions</h2>
+        <div class="accordion">
+          <article class="faq-item open"><button aria-expanded="true"><span class="faq-num">01</span><strong>Is this another to-do list?</strong><i></i></button><div class="answer"><p>No. Your to-do list shows everything you could do. TimeBudget shows what your day can actually hold.</p></div></article>
+          <article class="faq-item"><button aria-expanded="false"><span class="faq-num">02</span><strong>Does TimeBudget choose my priorities?</strong><i></i></button><div class="answer"><p>No. It makes capacity and trade-offs visible, so you can choose with confidence.</p></div></article>
+          <article class="faq-item"><button aria-expanded="false"><span class="faq-num">03</span><strong>What if my estimate is wrong?</strong><i></i></button><div class="answer"><p>The difference is useful evidence—not a score. Use it to make the next commitment better.</p></div></article>
+        </div>
+      </section>
+
+      <section class="final-cta" id="cta"><div class="reveal"><h2>Fund today's most important work.</h2><a class="secondary-button" href="mailto:hello@timebudget.app">Build Your Focus Budget</a></div></section>
+    </main>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
