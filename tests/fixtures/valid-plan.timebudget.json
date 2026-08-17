@@ -1,0 +1,91 @@
+{
+  "format": "timebudget-plan",
+  "schema_version": "1.0.0",
+  "revision": 3,
+  "exported_at": "2026-08-16T13:40:00+08:00",
+  "plan": {
+    "id": "tbp_2026-08-16",
+    "date": "2026-08-16",
+    "timezone": "Asia/Taipei",
+    "start_at": "2026-08-16T09:00:00+08:00",
+    "end_at": "2026-08-16T18:00:00+08:00",
+    "lifecycle_status": "active",
+    "closed_at": null,
+    "close_reason": null,
+    "buffer_original_minutes": 30,
+    "buffer_target_minutes": 30
+  },
+  "reserves": [
+    {
+      "id": "reserve_001",
+      "type": "meal",
+      "title": "Lunch",
+      "minutes": 60,
+      "status": "consumed",
+      "start_at": "2026-08-16T12:00:00+08:00",
+      "end_at": "2026-08-16T13:00:00+08:00",
+      "remaining_minutes": 0,
+      "actual_minutes": 55,
+      "consumed_at": "2026-08-16T12:55:00+08:00"
+    },
+    {
+      "id": "reserve_002",
+      "type": "break",
+      "title": "Afternoon break",
+      "minutes": 15,
+      "status": "planned",
+      "start_at": null,
+      "end_at": null,
+      "remaining_minutes": 15,
+      "actual_minutes": null,
+      "consumed_at": null
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task_001",
+      "title": "Finish proposal",
+      "priority": "must",
+      "status": "completed",
+      "baseline_estimated_minutes": 120,
+      "estimate_source": "user",
+      "estimate_range_minutes": null,
+      "actual_minutes": 140,
+      "actual_source": "user_reported",
+      "remaining_estimate_minutes": 0,
+      "not_before_at": null,
+      "deadline_at": null,
+      "carried_from_plan_id": null,
+      "carried_from_task_id": null,
+      "completed_at": "2026-08-16T11:20:00+08:00"
+    },
+    {
+      "id": "task_002",
+      "title": "Reply to client email",
+      "priority": "should",
+      "status": "planned",
+      "baseline_estimated_minutes": 30,
+      "estimate_source": "user",
+      "estimate_range_minutes": null,
+      "actual_minutes": null,
+      "actual_source": null,
+      "remaining_estimate_minutes": 30,
+      "not_before_at": null,
+      "deadline_at": null,
+      "carried_from_plan_id": null,
+      "carried_from_task_id": null,
+      "completed_at": null
+    }
+  ],
+  "snapshot": {
+    "as_of": "2026-08-16T13:40:00+08:00",
+    "total_plan_minutes": 540,
+    "clock_minutes_remaining": 260,
+    "unfinished_estimated_minutes": 30,
+    "pending_reserve_minutes": 15,
+    "raw_slack_minutes": 215,
+    "buffer_target_minutes": 30,
+    "safe_slack_minutes": 185,
+    "capacity_status": "healthy"
+  }
+}
