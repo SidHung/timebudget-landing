@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "python3 -m http.server 5173 --bind 127.0.0.1",
     "build": "node --check src/main.js",
-    "preview": "python3 -m http.server 4173 --bind 127.0.0.1"
+    "preview": "python3 -m http.server 4173 --bind 127.0.0.1",
+    "test:skill": "python3 -m unittest discover -s tests -p 'test_*.py'"
   }
 }
