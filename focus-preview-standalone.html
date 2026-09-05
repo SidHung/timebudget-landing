@@ -23,7 +23,7 @@ img.donut{display:block;width:min(330px,100%);height:auto;margin:48px auto 0;bac
 .scenario-card{min-height:154px;display:grid;grid-template-columns:58px 1fr;gap:18px;align-items:start;background:rgba(255,255,255,.9);border:1px solid rgba(83,105,151,.1);border-radius:16px;padding:24px;box-shadow:0 12px 28px rgba(36,55,88,.09)}
 .scenario-icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:#e7edff;color:#465fe4}
 .scenario-icon svg{width:34px;height:34px}
-.scenario-card span{display:block;margin:1px 0 7px;color:#5570e6;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.scenario-card .scenario-kicker{display:block;margin:8px 0 7px;color:#5570e6;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
 .scenario-card h3{margin:0 0 8px;font-size:16px;line-height:1.25}
 .scenario-card p{margin:0;color:#73777f;font-size:12px;line-height:1.45}
 
@@ -54,9 +54,41 @@ img.donut{display:block;width:min(330px,100%);height:auto;margin:48px auto 0;bac
 
 @media(max-width:800px){img.donut{width:270px;height:auto}.problem{padding-bottom:70px}.problem-inner{min-height:0}.problem-scenarios{grid-template-columns:1fr;margin-top:0}.scenario-card{min-height:0}.rebalance-flow{max-width:360px;margin:28px auto 0}}
 
+/* Visible review annotations for partner and designer handoff. */
+.review-banner{min-height:58px;padding:10px max(8vw,48px);display:flex;align-items:center;justify-content:space-between;gap:24px;background:#fff7e8;border-bottom:1px solid #f0cb8f;color:#4e4435}
+.review-banner>div{display:flex;align-items:baseline;gap:14px}
+.review-banner strong{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:#9b5a11}
+.review-banner span{font-size:13px}
+.review-banner a{color:#87500f;font-size:12px;font-weight:700;text-decoration:none;border-bottom:1px solid currentColor;white-space:nowrap}
+.design-badge{display:inline-flex!important;width:max-content;align-items:center;border:1px solid #e7ad58;border-radius:999px;padding:4px 8px!important;background:#fff5df;color:#9a590b!important;font-size:8px!important;font-weight:800!important;letter-spacing:.07em!important;line-height:1!important;text-transform:uppercase}
+.scenario-card{min-height:230px}
+.review-note{margin:12px 0 0!important;padding:10px 11px;border-left:3px solid #e5a346;border-radius:0 8px 8px 0;background:#fff8eb;color:#6f604b!important;font-size:10px!important;line-height:1.5!important}
+.feature-card{min-height:650px}
+.feature-placeholder-badge{margin-top:18px}
+.feature-placeholder-badge+.rebalance-flow{margin-top:10px}
+.feature-review-note{margin-top:12px!important}
+.design-handoff{margin-top:4px;margin-bottom:100px;padding:38px;border:1px solid #edbd77;border-radius:20px;background:#fffaf1;box-shadow:0 10px 28px rgba(86,59,22,.08)}
+.handoff-heading{display:grid;grid-template-columns:1fr auto;column-gap:28px;align-items:start}
+.handoff-heading .design-badge{grid-column:1/-1;margin-bottom:14px}
+.handoff-heading h2{grid-column:1;margin:0 0 10px;font-size:28px}
+.handoff-heading p{grid-column:1;margin:0;max-width:760px;color:#746b5f;font-size:14px;line-height:1.55}
+.handoff-heading a{grid-column:2;grid-row:2/4;align-self:center;border:1px solid #d89942;border-radius:999px;padding:12px 18px;color:#88500d;text-decoration:none;font-size:12px;font-weight:700;background:#fff}
+.handoff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.handoff-grid article{background:#fff;border:1px solid #f0dfc6;border-radius:14px;padding:22px}
+.handoff-grid article>span{display:grid;place-items:center;width:30px;height:30px;margin-bottom:16px;border-radius:50%;background:#e9a74f;color:#fff;font-size:11px;font-weight:800}
+.handoff-grid h3{margin:0 0 9px;font-size:15px}
+.handoff-grid p{margin:0;color:#746f68;font-size:12px;line-height:1.55}
+.handoff-removal{margin:20px 0 0;padding-top:18px;border-top:1px solid #ecd7b7;color:#7c6a50;font-size:11px;line-height:1.5}
+.handoff-removal code{padding:2px 5px;border-radius:4px;background:#f5ead8;color:#6e4c20}
+@media(max-width:800px){.review-banner{padding:12px 20px;align-items:flex-start;flex-direction:column;gap:8px}.review-banner>div{display:grid;gap:4px}.scenario-card{min-height:0}.feature-card{min-height:650px}.design-handoff{margin-bottom:70px;padding:26px 20px}.handoff-heading{display:block}.handoff-heading a{display:inline-flex;margin-top:18px}.handoff-grid{grid-template-columns:1fr}.handoff-grid article{padding:18px}}
+
 </style>
   </head>
   <body>
+    <aside class="review-banner review-only" aria-label="Design review notice">
+      <div><strong>Design review preview</strong><span>黃色標記是暫代視覺，正式上線前會移除。</span></div>
+      <a href="#design-handoff">查看設計師調整方向 ↓</a>
+    </aside>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="TimeBudget home"><em>Time</em>Budget</a>
       <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
@@ -90,19 +122,19 @@ img.donut{display:block;width:min(330px,100%);height:auto;margin:48px auto 0;bac
             <div class="scenario-icon" data-visual-placeholder="scenario-unexpected" aria-hidden="true">
               <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="11" width="27" height="28" rx="5"/><path d="M14 7v8M29 7v8M8 19h27M39 25v14M32 32h14"/></svg>
             </div>
-            <div><span>Unexpected</span><h3>Urgent work arrives</h3><p>Trade it against work already planned.</p></div>
+            <div><span class="design-badge">Design placeholder · Icon</span><span class="scenario-kicker">Unexpected</span><h3>Urgent work arrives</h3><p>Trade it against work already planned.</p><p class="review-note">設計方向：呈現「原本排程中插入一項新工作」，避免只畫一般新增按鈕。</p></div>
           </article>
           <article class="scenario-card reveal">
             <div class="scenario-icon" data-visual-placeholder="scenario-overrun" aria-hidden="true">
               <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="25" r="14"/><path d="M22 17v9l6 4M15 7h14M34 13l4-4M34 37l4 4"/></svg>
             </div>
-            <div><span>Overrun</span><h3>Work takes longer</h3><p>Recalculate what still fits before the day overloads.</p></div>
+            <div><span class="design-badge">Design placeholder · Icon</span><span class="scenario-kicker">Overrun</span><h3>Work takes longer</h3><p>Recalculate what still fits before the day overloads.</p><p class="review-note">設計方向：呈現工時超出原估算邊界；重點是容量改變，不是催促使用者加速。</p></div>
           </article>
           <article class="scenario-card reveal">
             <div class="scenario-icon" data-visual-placeholder="scenario-ahead" aria-hidden="true">
               <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 35h34"/><rect x="9" y="22" width="11" height="9" rx="2" stroke-dasharray="3 3"/><rect x="29" y="22" width="11" height="9" rx="2"/><path d="M34 16c-5-5-12-5-17 0M17 16l1-6M17 16l6-1"/></svg>
             </div>
-            <div><span>Ahead</span><h3>You finish early</h3><p>Pull the next high-impact task forward.</p></div>
+            <div><span class="design-badge">Design placeholder · Icon</span><span class="scenario-kicker">Ahead</span><h3>You finish early</h3><p>Pull the next high-impact task forward.</p><p class="review-note">設計方向：呈現空出的時段被下一項重要工作補入，避免畫成績效或成長圖表。</p></div>
           </article>
         </div>
       </section>
@@ -121,6 +153,7 @@ img.donut{display:block;width:min(330px,100%);height:auto;margin:48px auto 0;bac
           <article class="feature-card reveal">
             <h3>Adjust when plans change</h3>
             <p>Protect what matters, move what no longer fits, and keep the day within capacity.</p>
+            <span class="design-badge feature-placeholder-badge">Design placeholder · Rescheduling visual</span>
             <div class="rebalance-flow" data-visual-placeholder="flexible-rescheduling-demo" aria-label="An urgent task is added and the day is rebalanced">
               <div class="plan-state plan-before">
                 <div class="plan-state-head"><strong>Before</strong><span>Today · 6 hrs</span></div>
@@ -138,6 +171,7 @@ img.donut{display:block;width:min(330px,100%);height:auto;margin:48px auto 0;bac
                 <div class="mini-task moved"><span>Launch post</span><small class="status moved-label">Tomorrow →</small><b>3 hrs</b></div>
               </div>
             </div>
+            <p class="review-note feature-review-note">設計方向：保留 Before → Change → Rebalanced 的因果；讓 Fixed、Protected、Added、Moved 不只靠顏色辨識，並清楚標出被移動工作的去向。</p>
           </article>
           <article class="feature-card reveal">
             <h3>Learn your pace</h3>
@@ -156,6 +190,21 @@ img.donut{display:block;width:min(330px,100%);height:auto;margin:48px auto 0;bac
             </div>
           </article>
         </div>
+      </section>
+
+      <section class="design-handoff shell review-only" id="design-handoff">
+        <div class="handoff-heading">
+          <span class="design-badge">Review-only notes</span>
+          <h2>設計師調整範圍</h2>
+          <p>以下是這個版本刻意保留的暫代視覺。功能敘事與資訊層級已先放進頁面，設計師只需要針對指定範圍深化，不需要重新定義整段內容。</p>
+          <a href="https://github.com/SidHung/timebudget-landing/blob/codex/focus-reschedule-story/docs/focus-visual-brief.md" target="_blank" rel="noreferrer">開啟完整 Markdown 規格 ↗</a>
+        </div>
+        <div class="handoff-grid">
+          <article><span>01</span><h3>三個情境圖示</h3><p>重新設計 Unexpected、Overrun、Ahead 三枚 SVG。三者需有一致筆畫與幾何語言，且不讀標題也能分辨情境。</p></article>
+          <article><span>02</span><h3>彈性調整示意</h3><p>深化中間卡片的 Before、Change、Rebalanced 視覺。必須看得出新任務加入後，哪一項工作被保留、哪一項被移到明天。</p></article>
+          <article><span>03</span><h3>交付與驗收</h3><p>提供桌面與手機 Figma component、SVG 圖示、狀態 token；顏色不能是唯一提示，靜態畫面也必須完整表達結果。</p></article>
+        </div>
+        <p class="handoff-removal">正式合併前：移除所有 <code>.review-only</code>、<code>.design-badge</code> 與 <code>.review-note</code> 標註，保留最終視覺與產品文案。</p>
       </section>
 
       <section class="process shell">

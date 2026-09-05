@@ -2,6 +2,13 @@
 
 This brief covers the temporary visual concepts added to `focus.html`. The page must remain understandable while these placeholders are present; final artwork should clarify the same story rather than introduce a new one.
 
+## How placeholders appear in the review page
+
+- Temporary visuals are visibly labeled `Design placeholder` in the review branch and standalone preview.
+- Each placeholder includes a short Chinese direction note so the page can be reviewed without opening this document.
+- The in-page `設計師調整範圍` section summarizes the exact handoff scope and links back to this file.
+- These review annotations use `.review-only`, `.design-badge`, and `.review-note`; remove the annotations before production while retaining the approved final visuals.
+
 ## Shared visual direction
 
 - Match the existing TimeBudget language: simple product UI, rounded geometry, black line work, blue and teal accents, pale blue surfaces, and restrained shadows.
