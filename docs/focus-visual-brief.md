@@ -1,106 +1,106 @@
-# Focus page visual brief
+# Focus 頁面視覺設計需求
 
-This brief covers the temporary visual concepts added to `focus.html`. The page must remain understandable while these placeholders are present; final artwork should clarify the same story rather than introduce a new one.
+本文件說明 `focus.html` 目前加入的暫代視覺，以及後續交由設計師深化時需要遵循的方向。即使仍使用 placeholder，頁面本身也必須能完整傳達概念；正式設計應強化相同的故事，而不是重新定義內容。
 
-## How placeholders appear in the review page
+## 如何在評審頁面辨識 placeholder
 
-- Temporary visuals are visibly labeled `Design placeholder` in the review branch and standalone preview.
-- Each placeholder includes a short Chinese direction note so the page can be reviewed without opening this document.
-- The in-page `設計師調整範圍` section summarizes the exact handoff scope and links back to this file.
-- These review annotations use `.review-only`, `.design-badge`, and `.review-note`; remove the annotations before production while retaining the approved final visuals.
+- 預覽分支與獨立 HTML 中，所有暫代視覺都會顯示 `Design placeholder` 標籤。
+- 每個 placeholder 下方都有簡短的中文設計方向，不需另外開啟本文件也能直接討論。
+- 頁面內的「設計師調整範圍」區塊會摘要實際交付範圍，並連結回本文件。
+- 這些評審標註使用 `.review-only`、`.design-badge` 與 `.review-note`；正式上線前應移除標註，但保留核准後的最終視覺。
 
-## Shared visual direction
+## 共通視覺方向
 
-- Match the existing TimeBudget language: simple product UI, rounded geometry, black line work, blue and teal accents, pale blue surfaces, and restrained shadows.
-- Communicate time trade-offs rather than generic productivity or speed.
-- Do not portray a changed plan as failure. The emotional tone should be calm, capable, and intentional.
-- Avoid dense calendar screens, red warning states, decorative characters, or arrows whose origin and destination are unclear.
-- Do not bake interface copy into raster images. Text, task names, times, and status labels must remain editable in Figma and implementable as HTML.
-- Supply icons or illustrative line work as SVG. If raster texture is essential, also provide a 2x PNG export with a transparent background.
+- 延續現有 TimeBudget 的視覺語言：簡潔的產品介面、圓角幾何、黑色線條、藍色與青綠色重點、淺藍底色及克制的陰影。
+- 核心要傳達的是「時間取捨」，而不是泛用的效率、速度或生產力概念。
+- 計畫發生變化不應被描繪成失敗；整體情緒需保持冷靜、有掌控感且出於主動選擇。
+- 避免複雜的行事曆畫面、紅色警告狀態、純裝飾人物，以及起點與終點不清楚的箭頭。
+- 不要將介面文字烙在點陣圖片內。任務名稱、時間與狀態標籤必須可在 Figma 中編輯，並能由前端以 HTML 實作。
+- 圖示與線條插畫請提供 SVG。若確實需要點陣材質，另提供透明背景的 2x PNG。
 
-## Position A: extended problem section
+## 位置 A：問題區塊下方的三個情境
 
-**Code marker:** `data-visual-placeholder="scenario-unexpected"`, `scenario-overrun`, and `scenario-ahead`
+**程式碼標記：** `data-visual-placeholder="scenario-unexpected"`、`scenario-overrun`、`scenario-ahead`
 
-**Current placeholder:** three small inline SVG icons inside the scenario cards.
+**目前的 placeholder：** 三張情境卡內的簡單 inline SVG 圖示。
 
-**Purpose:** make the three reasons for rescheduling distinguishable before the reader studies the text.
+**設計目的：** 讓讀者在閱讀標題前，就能辨識三種需要重新調整計畫的原因。
 
-### A1 — Unexpected work
+### A1 — 突發工作（Unexpected work）
 
-- Show a planned day receiving a new item.
-- Recommended symbol: calendar block with a clearly attached plus sign.
-- The plus sign must mean “new work added,” not “create an event.”
+- 呈現原本已有安排的一天，突然加入一項新工作。
+- 建議符號：行事曆或時間區塊，加上一個明確「插入」的新項目。
+- 加號必須表達「新工作加入現有計畫」，不要看起來只是一般的新增行事曆事件按鈕。
 
-### A2 — Time overrun
+### A2 — 工時超出預期（Time overrun）
 
-- Show an estimate extending beyond its original boundary.
-- Recommended symbol: clock with an extending arc, progress line, or time block crossing a marker.
-- Avoid a stopwatch or racing metaphor; the issue is changed capacity, not working faster.
+- 呈現任務實際花費的時間超過原本估算範圍。
+- 建議符號：時鐘搭配延伸弧線、超出刻度的進度線，或跨越原定邊界的時間區塊。
+- 避免使用碼錶或競速意象；這裡要表達的是可用容量改變，而不是要求使用者工作得更快。
 
-### A3 — Finish early
+### A3 — 提早完成（Finish early）
 
-- Show available capacity opening up and the next valuable task moving forward.
-- Recommended symbol: an empty time block followed by a task moving into it.
-- Avoid an upward financial chart; it can incorrectly imply performance analytics.
+- 呈現一段時間被釋放，下一項高價值工作因此可以提前。
+- 建議符號：一個空出的時間區塊，以及另一項任務移入該位置。
+- 避免向上的折線圖或績效圖表，以免被誤解為成長或工作表現分析。
 
-### Layout and delivery
+### 版面與交付規格
 
-- Icon container in the current desktop layout: 52 × 52 px.
-- SVG artwork safe area: approximately 34 × 34 px.
-- Use one consistent stroke weight and corner treatment for all three icons.
-- Provide normal and dark-background-safe SVG versions only if the icon colors cannot be tokenized.
+- 目前桌面版的圖示容器為 52 × 52 px。
+- SVG 圖案的安全範圍約為 34 × 34 px。
+- 三枚圖示需使用一致的線條粗細、圓角與幾何風格。
+- 若圖示顏色無法由設計 token 控制，再額外提供適用於深色背景的版本；否則不需製作重複圖檔。
 
-## Position B: flexible rescheduling feature card
+## 位置 B：彈性調整功能卡
 
-**Code marker:** `data-visual-placeholder="flexible-rescheduling-demo"`
+**程式碼標記：** `data-visual-placeholder="flexible-rescheduling-demo"`
 
-**Current placeholder:** a coded prototype showing `Before → Urgent bug → Rebalanced`. Treat its information hierarchy as the required behavior, not as final visual polish.
+**目前的 placeholder：** 以程式實作的 `Before → Urgent bug → Rebalanced` 示意。現有資訊層級代表必要功能敘事，不代表最終視覺細節。
 
-**Purpose:** let a reader understand within three seconds that a new task causes an explicit trade-off. TimeBudget protects fixed and important work, then moves the work that no longer fits.
+**設計目的：** 讓讀者在三秒內理解：新任務加入後會產生明確的時間取捨。TimeBudget 會先保護固定與重要工作，再移動已經無法放入當天的工作。
 
-### Required story
+### 必須呈現的故事
 
-1. Before: the day has 6 usable hours and three planned tasks.
-2. Change: an urgent two-hour bug appears.
-3. Rebalanced: the client call remains fixed, the release blocker remains protected, the urgent bug is added, and the launch post moves to tomorrow.
-4. The final state remains within the six-hour capacity. Do not imply that all eight hours were squeezed into the original plan.
+1. Before：今天有 6 小時可用時間，並已安排三項任務。
+2. Change：突然加入一項兩小時的緊急除錯工作。
+3. Rebalanced：客戶會議維持固定、版本阻塞任務受到保護、緊急除錯加入今天，Launch post 移至明天。
+4. 調整後仍維持在 6 小時容量內；不能讓人誤以為全部 8 小時工作都被擠進原本的計畫。
 
-### Required visual states
+### 必須清楚區分的狀態
 
-- `Fixed`: neutral gray plus a lock or fixed-point cue.
-- `Protected`: TimeBudget blue; visually persistent between states.
-- `Added`: warm amber used only for the incoming change.
-- `Moved`: muted treatment plus a visible destination such as `Tomorrow →`.
-- Use motion arrows only where they connect a task to its new destination. A generic refresh icon is not enough.
+- `Fixed`：使用中性灰色，並搭配鎖定或固定點的提示。
+- `Protected`：使用 TimeBudget 藍色，且在調整前後保持一致。
+- `Added`：使用暖橘色，只用來標示新加入的變化。
+- `Moved`：使用較弱的視覺處理，但必須明確顯示目的地，例如 `Tomorrow →`。
+- 動態箭頭只能用於連接任務與實際移動目的地；單一刷新圖示不足以解釋發生了什麼。
 
-### Preferred composition
+### 建議構圖
 
-- Primary direction: stacked Before, Change, and Rebalanced states inside the existing middle feature card.
-- Desktop content width: approximately 330–340 px.
-- Mobile: preserve the same vertical reading order; do not require horizontal scrolling.
-- Keep text legible at the current card scale. If a task status needs a legend to be understood, simplify the status instead.
+- 優先採用垂直堆疊的 Before、Change、Rebalanced，放在目前中間的功能卡內。
+- 桌面版內容寬度約 330–340 px。
+- 手機版維持相同的垂直閱讀順序，不可依賴橫向捲動。
+- 所有文字需在目前卡片比例下保持清晰。若任務狀態必須另外查看圖例才能理解，應優先簡化狀態設計。
 
-### Optional interaction or motion
+### 選配互動或動態
 
-- A 500–700 ms transition may move `Launch post` to `Tomorrow` and insert `Urgent bug`.
-- The completed state must remain visible without hover or interaction.
-- Provide a static final frame for reduced-motion users.
-- Motion is optional and must not block implementation of the static card.
+- 可使用 500–700 ms 的過場，呈現 `Launch post` 移至 `Tomorrow`，並插入 `Urgent bug`。
+- 不需滑鼠停留或操作，畫面也必須停留在可理解的完成狀態。
+- 需為偏好減少動態效果的使用者提供完整靜態畫面。
+- 動態為選配，不得影響靜態卡片的開發與交付。
 
-### Designer deliverables
+### 設計師交付項目
 
-- Figma component for the full middle card at desktop and mobile widths.
-- Separate variants for Before and Rebalanced states.
-- Status tokens and annotations for Fixed, Protected, Added, and Moved.
-- SVG icons and arrows, if they differ from the coded placeholders.
-- A short note describing which visual elements are decorative and which require accessible text.
+- 完整中間卡片的桌面版與手機版 Figma component。
+- Before 與 Rebalanced 的獨立 variant。
+- Fixed、Protected、Added、Moved 的狀態 token 與使用說明。
+- 若與目前 placeholder 不同，提供最終 SVG 圖示與箭頭。
+- 簡短註明哪些視覺只屬於裝飾、哪些內容需要提供無障礙文字。
 
-## Review checklist
+## 驗收檢查表
 
-- A first-time reader can explain what changed and which task moved.
-- All three problem scenarios remain visually distinct without reading their headings.
-- Color is not the only signal for task status.
-- No task silently disappears between Before and Rebalanced.
-- Desktop at 1280 px and mobile at 390 px retain a clear reading order.
-- Final artwork continues to support the page copy: plans adapt to capacity instead of overflowing the day.
+- 第一次看到畫面的讀者能說明發生了什麼變化，以及哪一項任務被移動。
+- 不閱讀標題時，三種問題情境仍可透過圖示區分。
+- 任務狀態不只依賴顏色表達。
+- Before 與 Rebalanced 之間沒有任務無故消失。
+- 在 1280 px 桌面版與 390 px 手機版中，都維持清楚的閱讀順序。
+- 最終視覺持續支持頁面核心文案：計畫依容量調整，而不是讓工作持續溢出當天。
