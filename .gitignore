@@ -10,3 +10,6 @@ ProductHunt 文案準備*.md
 
 # Internal design references (not used by the site)
 public/reference/
+
+# Separate ChatGPT Sites source repository
+/chatgpt-site/

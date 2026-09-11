@@ -4,10 +4,9 @@
 
 ## 如何在評審頁面辨識 placeholder
 
-- 預覽分支與獨立 HTML 中，所有暫代視覺都會顯示 `Design placeholder` 標籤。
-- 每個 placeholder 下方都有簡短的中文設計方向，不需另外開啟本文件也能直接討論。
-- 頁面內的「設計師調整範圍」區塊會摘要實際交付範圍，並連結回本文件。
-- 這些評審標註使用 `.review-only`、`.design-badge` 與 `.review-note`；正式上線前應移除標註，但保留核准後的最終視覺。
+- 頁面與 ChatGPT Site 僅在待補圖位置保留對應尺寸的圖框，框內標示 `place holder`。
+- 產品標題與文案直接呈現；頁面不加入評審橫幅、設計方向說明或交接區塊。
+- 設計方向集中在本文件。正式圖稿完成後，替換對應圖框即可。
 
 ## 共通視覺方向
 
@@ -22,7 +21,7 @@
 
 **程式碼標記：** `data-visual-placeholder="scenario-unexpected"`、`scenario-overrun`、`scenario-ahead`
 
-**目前的 placeholder：** 三張情境卡內的簡單 inline SVG 圖示。
+**目前的 placeholder：** 三張情境卡內各一個 52 × 52 px 圖框，只顯示 `place holder`。
 
 **設計目的：** 讓讀者在閱讀標題前，就能辨識三種需要重新調整計畫的原因。
 
@@ -55,7 +54,7 @@
 
 **程式碼標記：** `data-visual-placeholder="flexible-rescheduling-demo"`
 
-**目前的 placeholder：** 以程式實作的 `Before → Urgent bug → Rebalanced` 示意。現有資訊層級代表必要功能敘事，不代表最終視覺細節。
+**目前的 placeholder：** 卡片內寬度隨容器調整、高 350 px 的圖框，只顯示 `place holder`。以下 Before → Change → Rebalanced 是提供設計師的構圖需求，並未預先繪製在頁面中。
 
 **設計目的：** 讓讀者在三秒內理解：新任務加入後會產生明確的時間取捨。TimeBudget 會先保護固定與重要工作，再移動已經無法放入當天的工作。
 

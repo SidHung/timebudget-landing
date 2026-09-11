@@ -8,13 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/styles.css?v=focus-design-review" />
+    <link rel="stylesheet" href="src/styles.css?v=focus-placeholders" />
   </head>
   <body>
-    <aside class="review-banner review-only" aria-label="Design review notice">
-      <div><strong>Design review preview</strong><span>黃色標記是暫代視覺，正式上線前會移除。</span></div>
-      <a href="#design-handoff">查看設計師調整方向 ↓</a>
-    </aside>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="TimeBudget home"><em>Time</em>Budget</a>
       <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
@@ -45,22 +41,16 @@
         </div>
         <div class="shell problem-scenarios" aria-label="Three reasons a daily plan may need to change">
           <article class="scenario-card reveal">
-            <div class="scenario-icon" data-visual-placeholder="scenario-unexpected" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="11" width="27" height="28" rx="5"/><path d="M14 7v8M29 7v8M8 19h27M39 25v14M32 32h14"/></svg>
-            </div>
-            <div><span class="design-badge">Design placeholder · Icon</span><span class="scenario-kicker">Unexpected</span><h3>Urgent work arrives</h3><p>Trade it against work already planned.</p><p class="review-note">設計方向：呈現「原本排程中插入一項新工作」，避免只畫一般新增按鈕。</p></div>
+            <div class="scenario-icon visual-placeholder" data-visual-placeholder="scenario-unexpected" role="img" aria-label="place holder">place holder</div>
+            <div><span class="scenario-kicker">Unexpected</span><h3>Urgent work arrives</h3><p>Trade it against work already planned.</p></div>
           </article>
           <article class="scenario-card reveal">
-            <div class="scenario-icon" data-visual-placeholder="scenario-overrun" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="25" r="14"/><path d="M22 17v9l6 4M15 7h14M34 13l4-4M34 37l4 4"/></svg>
-            </div>
-            <div><span class="design-badge">Design placeholder · Icon</span><span class="scenario-kicker">Overrun</span><h3>Work takes longer</h3><p>Recalculate what still fits before the day overloads.</p><p class="review-note">設計方向：呈現工時超出原估算邊界；重點是容量改變，不是催促使用者加速。</p></div>
+            <div class="scenario-icon visual-placeholder" data-visual-placeholder="scenario-overrun" role="img" aria-label="place holder">place holder</div>
+            <div><span class="scenario-kicker">Overrun</span><h3>Work takes longer</h3><p>Recalculate what still fits before the day overloads.</p></div>
           </article>
           <article class="scenario-card reveal">
-            <div class="scenario-icon" data-visual-placeholder="scenario-ahead" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 35h34"/><rect x="9" y="22" width="11" height="9" rx="2" stroke-dasharray="3 3"/><rect x="29" y="22" width="11" height="9" rx="2"/><path d="M34 16c-5-5-12-5-17 0M17 16l1-6M17 16l6-1"/></svg>
-            </div>
-            <div><span class="design-badge">Design placeholder · Icon</span><span class="scenario-kicker">Ahead</span><h3>You finish early</h3><p>Pull the next high-impact task forward.</p><p class="review-note">設計方向：呈現空出的時段被下一項重要工作補入，避免畫成績效或成長圖表。</p></div>
+            <div class="scenario-icon visual-placeholder" data-visual-placeholder="scenario-ahead" role="img" aria-label="place holder">place holder</div>
+            <div><span class="scenario-kicker">Ahead</span><h3>You finish early</h3><p>Pull the next high-impact task forward.</p></div>
           </article>
         </div>
       </section>
@@ -79,25 +69,7 @@
           <article class="feature-card reveal">
             <h3>Adjust when plans change</h3>
             <p>Protect what matters, move what no longer fits, and keep the day within capacity.</p>
-            <span class="design-badge feature-placeholder-badge">Design placeholder · Rescheduling visual</span>
-            <div class="rebalance-flow" data-visual-placeholder="flexible-rescheduling-demo" aria-label="An urgent task is added and the day is rebalanced">
-              <div class="plan-state plan-before">
-                <div class="plan-state-head"><strong>Before</strong><span>Today · 6 hrs</span></div>
-                <div class="mini-task"><span>Client call</span><small class="status fixed">Fixed</small><b>1 hr</b></div>
-                <div class="mini-task"><span>Release blocker</span><small class="status protected">Protected</small><b>2 hrs</b></div>
-                <div class="mini-task"><span>Launch post</span><small class="status planned">Planned</small><b>3 hrs</b></div>
-              </div>
-              <div class="change-event"><span class="change-plus">+</span><strong>Urgent bug</strong><b>2 hrs</b></div>
-              <div class="flow-arrow" aria-hidden="true"><span></span></div>
-              <div class="plan-state plan-after">
-                <div class="plan-state-head"><strong>Rebalanced</strong><span>Within 6 hrs</span></div>
-                <div class="mini-task"><span>Client call</span><small class="status fixed">Fixed</small><b>1 hr</b></div>
-                <div class="mini-task"><span>Urgent bug</span><small class="status added">Added</small><b>2 hrs</b></div>
-                <div class="mini-task"><span>Release blocker</span><small class="status protected">Protected</small><b>2 hrs</b></div>
-                <div class="mini-task moved"><span>Launch post</span><small class="status moved-label">Tomorrow →</small><b>3 hrs</b></div>
-              </div>
-            </div>
-            <p class="review-note feature-review-note">設計方向：保留 Before → Change → Rebalanced 的因果；讓 Fixed、Protected、Added、Moved 不只靠顏色辨識，並清楚標出被移動工作的去向。</p>
+            <div class="rescheduling-placeholder visual-placeholder" data-visual-placeholder="flexible-rescheduling-demo" role="img" aria-label="place holder">place holder</div>
           </article>
           <article class="feature-card reveal">
             <h3>Learn your pace</h3>
@@ -116,21 +88,6 @@
             </div>
           </article>
         </div>
-      </section>
-
-      <section class="design-handoff shell review-only" id="design-handoff">
-        <div class="handoff-heading">
-          <span class="design-badge">Review-only notes</span>
-          <h2>設計師調整範圍</h2>
-          <p>以下是這個版本刻意保留的暫代視覺。功能敘事與資訊層級已先放進頁面，設計師只需要針對指定範圍深化，不需要重新定義整段內容。</p>
-          <a href="https://github.com/SidHung/timebudget-landing/blob/codex/focus-reschedule-story/docs/focus-visual-brief.md" target="_blank" rel="noreferrer">開啟完整 Markdown 規格 ↗</a>
-        </div>
-        <div class="handoff-grid">
-          <article><span>01</span><h3>三個情境圖示</h3><p>重新設計 Unexpected、Overrun、Ahead 三枚 SVG。三者需有一致筆畫與幾何語言，且不讀標題也能分辨情境。</p></article>
-          <article><span>02</span><h3>彈性調整示意</h3><p>深化中間卡片的 Before、Change、Rebalanced 視覺。必須看得出新任務加入後，哪一項工作被保留、哪一項被移到明天。</p></article>
-          <article><span>03</span><h3>交付與驗收</h3><p>提供桌面與手機 Figma component、SVG 圖示、狀態 token；顏色不能是唯一提示，靜態畫面也必須完整表達結果。</p></article>
-        </div>
-        <p class="handoff-removal">正式合併前：移除所有 <code>.review-only</code>、<code>.design-badge</code> 與 <code>.review-note</code> 標註，保留最終視覺與產品文案。</p>
       </section>
 
       <section class="process shell">
