@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/styles.css?v=focus-placeholders" />
+    <link rel="stylesheet" href="src/styles.css?v=focus-design-briefs" />
   </head>
   <body>
     <header class="site-header">
@@ -41,15 +41,30 @@
         </div>
         <div class="shell problem-scenarios" aria-label="Three reasons a daily plan may need to change">
           <article class="scenario-card reveal">
-            <div class="scenario-icon visual-placeholder" data-visual-placeholder="scenario-unexpected" role="img" aria-label="place holder">place holder</div>
+            <button type="button" class="scenario-icon visual-placeholder" data-visual-placeholder="scenario-unexpected" aria-expanded="false" aria-controls="brief-scenario-unexpected" aria-label="查看插圖設計需求：A1｜突發工作">place holder</button>
+            <aside class="design-brief" id="brief-scenario-unexpected" popover="manual" hidden lang="zh-Hant" aria-labelledby="title-scenario-unexpected">
+              <div class="design-brief-heading"><strong id="title-scenario-unexpected">A1｜突發工作</strong><button type="button" class="design-brief-close" aria-label="關閉設計需求">×</button></div>
+              <p><strong>目的：</strong>已有安排的一天突然插入新工作，需要與原有任務取捨。</p><ul><li>建議：行事曆／時間區塊，加上一項明確插入的新任務。</li><li>避免只畫加號，看起來像一般「新增事件」按鈕。</li></ul><p><strong>尺寸與交付：</strong>52 × 52 px，圖案安全範圍約 34 × 34 px；SVG，三枚圖示的線粗、圓角與幾何風格一致。</p>
+              <small>共同風格：簡潔線條、圓角幾何、藍／青綠重點；表達時間取捨，避免警報與焦慮感。</small>
+            </aside>
             <div><span class="scenario-kicker">Unexpected</span><h3>Urgent work arrives</h3><p>Trade it against work already planned.</p></div>
           </article>
           <article class="scenario-card reveal">
-            <div class="scenario-icon visual-placeholder" data-visual-placeholder="scenario-overrun" role="img" aria-label="place holder">place holder</div>
+            <button type="button" class="scenario-icon visual-placeholder" data-visual-placeholder="scenario-overrun" aria-expanded="false" aria-controls="brief-scenario-overrun" aria-label="查看插圖設計需求：A2｜工時超出預期">place holder</button>
+            <aside class="design-brief" id="brief-scenario-overrun" popover="manual" hidden lang="zh-Hant" aria-labelledby="title-scenario-overrun">
+              <div class="design-brief-heading"><strong id="title-scenario-overrun">A2｜工時超出預期</strong><button type="button" class="design-brief-close" aria-label="關閉設計需求">×</button></div>
+              <p><strong>目的：</strong>實際工時超過估算，壓縮其他任務的可用時間。</p><ul><li>建議：延伸的時鐘弧線、超出刻度的進度線，或跨越原定邊界的時間區塊。</li><li>避免碼錶或競速意象；表達容量改變，不是催促使用者加速。</li></ul><p><strong>尺寸與交付：</strong>52 × 52 px，圖案安全範圍約 34 × 34 px；SVG，三枚圖示的線粗、圓角與幾何風格一致。</p>
+              <small>共同風格：簡潔線條、圓角幾何、藍／青綠重點；表達時間取捨，避免警報與焦慮感。</small>
+            </aside>
             <div><span class="scenario-kicker">Overrun</span><h3>Work takes longer</h3><p>Recalculate what still fits before the day overloads.</p></div>
           </article>
           <article class="scenario-card reveal">
-            <div class="scenario-icon visual-placeholder" data-visual-placeholder="scenario-ahead" role="img" aria-label="place holder">place holder</div>
+            <button type="button" class="scenario-icon visual-placeholder" data-visual-placeholder="scenario-ahead" aria-expanded="false" aria-controls="brief-scenario-ahead" aria-label="查看插圖設計需求：A3｜提早完成">place holder</button>
+            <aside class="design-brief" id="brief-scenario-ahead" popover="manual" hidden lang="zh-Hant" aria-labelledby="title-scenario-ahead">
+              <div class="design-brief-heading"><strong id="title-scenario-ahead">A3｜提早完成</strong><button type="button" class="design-brief-close" aria-label="關閉設計需求">×</button></div>
+              <p><strong>目的：</strong>時間被釋放，下一項高價值工作因此可以提前。</p><ul><li>建議：空出的時間區塊，以及另一項任務移入該位置。</li><li>避免上升折線或績效圖表，以免被誤解為成長分析。</li></ul><p><strong>尺寸與交付：</strong>52 × 52 px，圖案安全範圍約 34 × 34 px；SVG，三枚圖示的線粗、圓角與幾何風格一致。</p>
+              <small>共同風格：簡潔線條、圓角幾何、藍／青綠重點；表達時間取捨，避免警報與焦慮感。</small>
+            </aside>
             <div><span class="scenario-kicker">Ahead</span><h3>You finish early</h3><p>Pull the next high-impact task forward.</p></div>
           </article>
         </div>
@@ -69,7 +84,12 @@
           <article class="feature-card reveal">
             <h3>Adjust when plans change</h3>
             <p>Protect what matters, move what no longer fits, and keep the day within capacity.</p>
-            <div class="rescheduling-placeholder visual-placeholder" data-visual-placeholder="flexible-rescheduling-demo" role="img" aria-label="place holder">place holder</div>
+            <button type="button" class="rescheduling-placeholder visual-placeholder" data-visual-placeholder="flexible-rescheduling-demo" aria-expanded="false" aria-controls="brief-flexible-rescheduling-demo" aria-label="查看插圖設計需求：B｜彈性調整示意圖">place holder</button>
+            <aside class="design-brief" id="brief-flexible-rescheduling-demo" popover="manual" hidden lang="zh-Hant" aria-labelledby="title-flexible-rescheduling-demo">
+              <div class="design-brief-heading"><strong id="title-flexible-rescheduling-demo">B｜彈性調整示意圖</strong><button type="button" class="design-brief-close" aria-label="關閉設計需求">×</button></div>
+              <p><strong>目的：</strong>三秒內看懂「新工作加入 → 保護重要任務 → 移動放不下的工作」。</p><p><strong>構圖與尺寸：</strong>寬隨卡片調整（桌面約 330–340 px），高 350 px；手機採垂直閱讀，不做橫向捲動。</p><ol><li><strong>Before：</strong>可用 6 小時：Client call 1h（Fixed）、Release blocker 2h（Protected）、Launch post 3h。</li><li><strong>Change：</strong>加入 Urgent bug 2h。</li><li><strong>Rebalanced：</strong>會議與重要任務保留，Urgent bug 加入今天；Launch post 3h 移到 Tomorrow。今天合計 5h，不可把 8h 硬塞進 6h。</li></ol><p><strong>狀態：</strong>Fixed 中性灰＋固定提示；Protected 藍色；Added 暖橘；Moved 弱化但標明 Tomorrow。不可只靠顏色，箭頭須連到實際目的地。</p><p><strong>交付：</strong>桌面／手機 Figma component、Before／Rebalanced variants、狀態 token、SVG 圖示與箭頭。文字可編輯，不烙在圖片內。</p><p><strong>選配動態：</strong>500–700 ms 呈現移動；仍需完整可理解的靜態版本。</p>
+              <small>共同風格：簡潔線條、圓角幾何、藍／青綠重點；表達時間取捨，避免警報與焦慮感。</small>
+            </aside>
           </article>
           <article class="feature-card reveal">
             <h3>Learn your pace</h3>

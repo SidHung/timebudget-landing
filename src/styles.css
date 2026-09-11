@@ -22,4 +22,17 @@ img.donut{display:block;width:min(330px,100%);height:auto;margin:48px auto 0;bac
 .visual-placeholder{display:grid;place-items:center;border:1px dashed #aeb6c4;background:#edf0f4;color:#626975;font-family:Arial,sans-serif;font-weight:400;text-align:center;border-radius:8px}
 .scenario-icon.visual-placeholder{width:52px;height:52px;font-size:12px;line-height:1.2;padding:4px}
 .rescheduling-placeholder{width:100%;height:350px;margin-top:26px;font-size:16px}
+/* Design notes float above the page without changing the reserved artwork size. */
+button.visual-placeholder{cursor:help;appearance:none}
+button.visual-placeholder:hover,button.visual-placeholder[aria-expanded="true"]{border-color:#5570e6;background:#e7edff}
+button.visual-placeholder:focus-visible{outline:3px solid #5570e6;outline-offset:3px}
+.design-brief{position:fixed;inset:auto;margin:0;width:min(380px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow:auto;overscroll-behavior:contain;z-index:1000;padding:20px;border:1px solid #cdd6e8;border-radius:14px;background:#fff;color:#303848;box-shadow:0 16px 48px rgba(29,45,78,.2);font:14px/1.65 Inter,Arial,sans-serif;text-align:left;overflow-wrap:anywhere}
+.design-brief[hidden]{display:none}
+.design-brief-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;font-size:16px}
+.design-brief .design-brief-close{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;padding:0;border:0;border-radius:8px;background:#edf0f4;color:#303848;font-size:24px;cursor:pointer}
+.design-brief .design-brief-close:focus-visible{outline:2px solid #5570e6;outline-offset:2px}
+.design-brief p{margin:0 0 12px;color:inherit;font-size:14px;line-height:1.65}
+.design-brief ul,.design-brief ol{margin:0 0 12px;padding-left:22px}
+.design-brief li+li{margin-top:8px}
+.design-brief small{display:block;border-top:1px solid #e4e9f1;padding-top:12px;color:#626975;font-size:12px;line-height:1.6}
 @media(max-width:800px){img.donut{width:270px;height:auto}.problem{padding-bottom:70px}.problem-inner{min-height:0}.problem-scenarios{grid-template-columns:1fr;margin-top:0}.scenario-card{min-height:0}.rescheduling-placeholder{max-width:360px;margin:28px auto 0}}

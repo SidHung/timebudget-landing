@@ -30,7 +30,21 @@ img.donut{display:block;width:min(330px,100%);height:auto;margin:48px auto 0;bac
 .visual-placeholder{display:grid;place-items:center;border:1px dashed #aeb6c4;background:#edf0f4;color:#626975;font-family:Arial,sans-serif;font-weight:400;text-align:center;border-radius:8px}
 .scenario-icon.visual-placeholder{width:52px;height:52px;font-size:12px;line-height:1.2;padding:4px}
 .rescheduling-placeholder{width:100%;height:350px;margin-top:26px;font-size:16px}
+/* Design notes float above the page without changing the reserved artwork size. */
+button.visual-placeholder{cursor:help;appearance:none}
+button.visual-placeholder:hover,button.visual-placeholder[aria-expanded="true"]{border-color:#5570e6;background:#e7edff}
+button.visual-placeholder:focus-visible{outline:3px solid #5570e6;outline-offset:3px}
+.design-brief{position:fixed;inset:auto;margin:0;width:min(380px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow:auto;overscroll-behavior:contain;z-index:1000;padding:20px;border:1px solid #cdd6e8;border-radius:14px;background:#fff;color:#303848;box-shadow:0 16px 48px rgba(29,45,78,.2);font:14px/1.65 Inter,Arial,sans-serif;text-align:left;overflow-wrap:anywhere}
+.design-brief[hidden]{display:none}
+.design-brief-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;font-size:16px}
+.design-brief .design-brief-close{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;padding:0;border:0;border-radius:8px;background:#edf0f4;color:#303848;font-size:24px;cursor:pointer}
+.design-brief .design-brief-close:focus-visible{outline:2px solid #5570e6;outline-offset:2px}
+.design-brief p{margin:0 0 12px;color:inherit;font-size:14px;line-height:1.65}
+.design-brief ul,.design-brief ol{margin:0 0 12px;padding-left:22px}
+.design-brief li+li{margin-top:8px}
+.design-brief small{display:block;border-top:1px solid #e4e9f1;padding-top:12px;color:#626975;font-size:12px;line-height:1.6}
 @media(max-width:800px){img.donut{width:270px;height:auto}.problem{padding-bottom:70px}.problem-inner{min-height:0}.problem-scenarios{grid-template-columns:1fr;margin-top:0}.scenario-card{min-height:0}.rescheduling-placeholder{max-width:360px;margin:28px auto 0}}
+
 </style>
   </head>
   <body>
@@ -64,15 +78,30 @@ img.donut{display:block;width:min(330px,100%);height:auto;margin:48px auto 0;bac
         </div>
         <div class="shell problem-scenarios" aria-label="Three reasons a daily plan may need to change">
           <article class="scenario-card reveal">
-            <div class="scenario-icon visual-placeholder" data-visual-placeholder="scenario-unexpected" role="img" aria-label="place holder">place holder</div>
+            <button type="button" class="scenario-icon visual-placeholder" data-visual-placeholder="scenario-unexpected" aria-expanded="false" aria-controls="brief-scenario-unexpected" aria-label="查看插圖設計需求：A1｜突發工作">place holder</button>
+            <aside class="design-brief" id="brief-scenario-unexpected" popover="manual" hidden lang="zh-Hant" aria-labelledby="title-scenario-unexpected">
+              <div class="design-brief-heading"><strong id="title-scenario-unexpected">A1｜突發工作</strong><button type="button" class="design-brief-close" aria-label="關閉設計需求">×</button></div>
+              <p><strong>目的：</strong>已有安排的一天突然插入新工作，需要與原有任務取捨。</p><ul><li>建議：行事曆／時間區塊，加上一項明確插入的新任務。</li><li>避免只畫加號，看起來像一般「新增事件」按鈕。</li></ul><p><strong>尺寸與交付：</strong>52 × 52 px，圖案安全範圍約 34 × 34 px；SVG，三枚圖示的線粗、圓角與幾何風格一致。</p>
+              <small>共同風格：簡潔線條、圓角幾何、藍／青綠重點；表達時間取捨，避免警報與焦慮感。</small>
+            </aside>
             <div><span class="scenario-kicker">Unexpected</span><h3>Urgent work arrives</h3><p>Trade it against work already planned.</p></div>
           </article>
           <article class="scenario-card reveal">
-            <div class="scenario-icon visual-placeholder" data-visual-placeholder="scenario-overrun" role="img" aria-label="place holder">place holder</div>
+            <button type="button" class="scenario-icon visual-placeholder" data-visual-placeholder="scenario-overrun" aria-expanded="false" aria-controls="brief-scenario-overrun" aria-label="查看插圖設計需求：A2｜工時超出預期">place holder</button>
+            <aside class="design-brief" id="brief-scenario-overrun" popover="manual" hidden lang="zh-Hant" aria-labelledby="title-scenario-overrun">
+              <div class="design-brief-heading"><strong id="title-scenario-overrun">A2｜工時超出預期</strong><button type="button" class="design-brief-close" aria-label="關閉設計需求">×</button></div>
+              <p><strong>目的：</strong>實際工時超過估算，壓縮其他任務的可用時間。</p><ul><li>建議：延伸的時鐘弧線、超出刻度的進度線，或跨越原定邊界的時間區塊。</li><li>避免碼錶或競速意象；表達容量改變，不是催促使用者加速。</li></ul><p><strong>尺寸與交付：</strong>52 × 52 px，圖案安全範圍約 34 × 34 px；SVG，三枚圖示的線粗、圓角與幾何風格一致。</p>
+              <small>共同風格：簡潔線條、圓角幾何、藍／青綠重點；表達時間取捨，避免警報與焦慮感。</small>
+            </aside>
             <div><span class="scenario-kicker">Overrun</span><h3>Work takes longer</h3><p>Recalculate what still fits before the day overloads.</p></div>
           </article>
           <article class="scenario-card reveal">
-            <div class="scenario-icon visual-placeholder" data-visual-placeholder="scenario-ahead" role="img" aria-label="place holder">place holder</div>
+            <button type="button" class="scenario-icon visual-placeholder" data-visual-placeholder="scenario-ahead" aria-expanded="false" aria-controls="brief-scenario-ahead" aria-label="查看插圖設計需求：A3｜提早完成">place holder</button>
+            <aside class="design-brief" id="brief-scenario-ahead" popover="manual" hidden lang="zh-Hant" aria-labelledby="title-scenario-ahead">
+              <div class="design-brief-heading"><strong id="title-scenario-ahead">A3｜提早完成</strong><button type="button" class="design-brief-close" aria-label="關閉設計需求">×</button></div>
+              <p><strong>目的：</strong>時間被釋放，下一項高價值工作因此可以提前。</p><ul><li>建議：空出的時間區塊，以及另一項任務移入該位置。</li><li>避免上升折線或績效圖表，以免被誤解為成長分析。</li></ul><p><strong>尺寸與交付：</strong>52 × 52 px，圖案安全範圍約 34 × 34 px；SVG，三枚圖示的線粗、圓角與幾何風格一致。</p>
+              <small>共同風格：簡潔線條、圓角幾何、藍／青綠重點；表達時間取捨，避免警報與焦慮感。</small>
+            </aside>
             <div><span class="scenario-kicker">Ahead</span><h3>You finish early</h3><p>Pull the next high-impact task forward.</p></div>
           </article>
         </div>
@@ -92,7 +121,12 @@ img.donut{display:block;width:min(330px,100%);height:auto;margin:48px auto 0;bac
           <article class="feature-card reveal">
             <h3>Adjust when plans change</h3>
             <p>Protect what matters, move what no longer fits, and keep the day within capacity.</p>
-            <div class="rescheduling-placeholder visual-placeholder" data-visual-placeholder="flexible-rescheduling-demo" role="img" aria-label="place holder">place holder</div>
+            <button type="button" class="rescheduling-placeholder visual-placeholder" data-visual-placeholder="flexible-rescheduling-demo" aria-expanded="false" aria-controls="brief-flexible-rescheduling-demo" aria-label="查看插圖設計需求：B｜彈性調整示意圖">place holder</button>
+            <aside class="design-brief" id="brief-flexible-rescheduling-demo" popover="manual" hidden lang="zh-Hant" aria-labelledby="title-flexible-rescheduling-demo">
+              <div class="design-brief-heading"><strong id="title-flexible-rescheduling-demo">B｜彈性調整示意圖</strong><button type="button" class="design-brief-close" aria-label="關閉設計需求">×</button></div>
+              <p><strong>目的：</strong>三秒內看懂「新工作加入 → 保護重要任務 → 移動放不下的工作」。</p><p><strong>構圖與尺寸：</strong>寬隨卡片調整（桌面約 330–340 px），高 350 px；手機採垂直閱讀，不做橫向捲動。</p><ol><li><strong>Before：</strong>可用 6 小時：Client call 1h（Fixed）、Release blocker 2h（Protected）、Launch post 3h。</li><li><strong>Change：</strong>加入 Urgent bug 2h。</li><li><strong>Rebalanced：</strong>會議與重要任務保留，Urgent bug 加入今天；Launch post 3h 移到 Tomorrow。今天合計 5h，不可把 8h 硬塞進 6h。</li></ol><p><strong>狀態：</strong>Fixed 中性灰＋固定提示；Protected 藍色；Added 暖橘；Moved 弱化但標明 Tomorrow。不可只靠顏色，箭頭須連到實際目的地。</p><p><strong>交付：</strong>桌面／手機 Figma component、Before／Rebalanced variants、狀態 token、SVG 圖示與箭頭。文字可編輯，不烙在圖片內。</p><p><strong>選配動態：</strong>500–700 ms 呈現移動；仍需完整可理解的靜態版本。</p>
+              <small>共同風格：簡潔線條、圓角幾何、藍／青綠重點；表達時間取捨，避免警報與焦慮感。</small>
+            </aside>
           </article>
           <article class="feature-card reveal">
             <h3>Learn your pace</h3>
@@ -196,6 +230,106 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+
+// Hover previews; click pins a brief for touch, scrolling, and text selection.
+(() => {
+  let active = null;
+  let pinned = false;
+  let closeTimer;
+  const cancelClose = () => clearTimeout(closeTimer);
+  const position = () => {
+    if (!active) return;
+    const { button, panel } = active;
+    const rect = button.getBoundingClientRect();
+    const gap = 8;
+    const margin = 12;
+    const width = document.documentElement.clientWidth;
+    const height = window.innerHeight;
+    panel.style.maxHeight = `${Math.max(0, height - margin * 2)}px`;
+    const panelWidth = panel.offsetWidth;
+    const panelHeight = panel.offsetHeight;
+    // Prefer beside the artwork; use below/above when the viewport is narrow.
+    let left = rect.right + gap;
+    let top = rect.top;
+    if (left + panelWidth > width - margin) {
+      left = rect.left - gap - panelWidth;
+      if (left < margin) {
+        left = rect.left;
+        top = rect.bottom + gap;
+        if (top + panelHeight > height - margin) top = rect.top - gap - panelHeight;
+      }
+    }
+    panel.style.left = `${Math.max(margin, Math.min(left, width - panelWidth - margin))}px`;
+    panel.style.top = `${Math.max(margin, Math.min(top, height - panelHeight - margin))}px`;
+  };
+  const close = () => {
+    cancelClose();
+    if (!active) return;
+    const { button, panel } = active;
+    active = null;
+    pinned = false;
+    if (panel.matches(':popover-open')) panel.hidePopover();
+    panel.hidden = true;
+    button.setAttribute('aria-expanded', 'false');
+  };
+  const open = (entry) => {
+    cancelClose();
+    if (active === entry) return;
+    close();
+    active = entry;
+    entry.panel.hidden = false;
+    entry.panel.showPopover?.();
+    entry.button.setAttribute('aria-expanded', 'true');
+    position();
+  };
+  const scheduleClose = () => {
+    cancelClose();
+    closeTimer = setTimeout(() => {
+      if (!active || pinned) return;
+      const focused = document.activeElement;
+      if (focused === active.button || active.panel.contains(focused)) return;
+      close();
+    }, 200);
+  };
+  document.querySelectorAll('button[data-visual-placeholder]').forEach((button) => {
+    const panel = document.getElementById(button.getAttribute('aria-controls'));
+    const entry = { button, panel };
+    // Top-layer popovers avoid clipping from animated cards. Moving the notes to
+    // body also keeps the fallback out of the scenario card's two-column grid.
+    document.body.append(panel);
+    button.addEventListener('pointerenter', (event) => {
+      if (event.pointerType === 'mouse' && !pinned) open(entry);
+    });
+    button.addEventListener('pointerleave', scheduleClose);
+    button.addEventListener('focus', () => {
+      if (button.matches(':focus-visible')) open(entry);
+    });
+    button.addEventListener('blur', scheduleClose);
+    button.addEventListener('click', () => {
+      if (active === entry && pinned) close();
+      else { open(entry); pinned = true; }
+    });
+    panel.addEventListener('pointerenter', cancelClose);
+    panel.addEventListener('pointerleave', scheduleClose);
+    panel.addEventListener('focusout', scheduleClose);
+    panel.querySelector('.design-brief-close').addEventListener('click', () => {
+      button.focus({ preventScroll: true });
+      close();
+    });
+  });
+  document.addEventListener('pointerdown', (event) => {
+    if (active && !active.button.contains(event.target) && !active.panel.contains(event.target)) close();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && active) {
+      if (active.panel.contains(document.activeElement)) active.button.focus({ preventScroll: true });
+      close();
+    }
+  });
+  window.addEventListener('resize', position);
+  window.addEventListener('scroll', position, { passive: true });
+})();
+
 </script>
   </body>
 </html>
